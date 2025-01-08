@@ -1,0 +1,42 @@
+* {
+ text-align:center;
+}
+#question1{
+    display:none;
+}
+#question2{
+    display:none;
+}
+#startbutton{
+    width:2cm;
+    height:1cm;
+}
+#settingsbutton{
+    width:2cm;
+    height:1cm;
+}
+#settingsmenu{
+    text-align:center;
+}
+.genrebutton{
+    margin:2px;
+    width:2cm;
+    height:2cm;
+}
+.difficultybutton{
+    margin:2px;
+    width:2cm;
+    height:2cm;
+}
+#difficulty{
+    background-color:red;
+    padding:5px;
+    display:inline-block;
+}
+#genre{
+    background-color:lime;
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    width:min-content;
+    padding:5px;
+}
