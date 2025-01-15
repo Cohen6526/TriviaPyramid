@@ -1,11 +1,43 @@
-* {
- text-align:center;
+body{
+    background-image:url("bricks.webp");
+}
+#screen{
+    display:inline-block;
+    width:100%;
+    padding:10px;
+    margin-left:-10px;
+    text-align:center;
 }
 #question1{
     display:none;
+    background-color:rgb(185, 148, 77);
+    border:black solid;
+}
+#title{
+    background-color:rgb(219, 179, 103);
+    padding:5px;
+    border:black solid;
+}
+@media(min-width:728px){
+    *{
+        text-align:center;
+    }
+    #screen{
+        width:auto;
+    }
+    #box1{
+        float:left;
+        width:48%;
+    }
+    #box2{
+        float:right;
+        width:48%;
+    }
 }
 #question2{
     display:none;
+    background-color:rgb(185, 148, 77);
+    border:black solid;
 }
 #startbutton{
     width:2cm;
@@ -17,6 +49,7 @@
 }
 #settingsmenu{
     text-align:center;
+    display:none;
 }
 .genrebutton{
     margin:2px;
@@ -29,14 +62,43 @@
     height:2cm;
 }
 #difficulty{
-    background-color:red;
+    background-color:rgb(185, 148, 77);
     padding:5px;
     display:inline-block;
 }
 #genre{
-    background-color:lime;
-    display:grid;
+    background-color:rgb(185, 148, 77);
+    display:inline-block;
     grid-template-columns: 33% 33% 33%;
-    width:min-content;
     padding:5px;
+}
+button{
+    background-color:rgb(219, 179, 103);
+}
+button:hover{
+    background-color:rgb(134, 110, 64);
+}
+#img1{
+    display:none;
+    border:black solid;
+    max-width:100%;
+}
+#img2{
+    display:none;
+    border:black solid;
+    max-width:100%;
+}
+#box1{
+    display:none;
+    padding:5px;
+}
+#box2{
+    display:none;
+    padding:5px;
+}
+#box1:hover{
+    background-color:rgb(0, 0, 0, 0.3);
+}
+#box2:hover{
+    background-color:rgb(0, 0, 0, 0.3);
 }

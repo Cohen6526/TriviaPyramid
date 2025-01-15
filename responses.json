@@ -1,0 +1,245 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "The &ldquo;fairy&rdquo; type made it&rsquo;s debut in which generation of the Pokemon core series games?",
+            "correct_answer": "6th",
+            "incorrect_answers": [
+                "2nd",
+                "7th",
+                "4th"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "General Knowledge",
+            "question": "What is the French word for &quot;hat&quot;?",
+            "correct_answer": "Chapeau",
+            "incorrect_answers": [
+                "Bonnet",
+                " &Eacute;charpe",
+                " Casque"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Cartoon &amp; Animations",
+            "question": "In South Park, what is Stan&#039;s surname?",
+            "correct_answer": "Marsh",
+            "incorrect_answers": [
+                "Stotch",
+                "Broflovski",
+                "Tweak"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Japanese Anime &amp; Manga",
+            "question": "What is the name of the device that allows for infinite energy in the anime &quot;Dimension W&quot;?",
+            "correct_answer": "Coils",
+            "incorrect_answers": [
+                "Wires",
+                "Collectors",
+                "Tesla"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "In the first game of the Sly Cooper franchise, what family heirloom did Sly Cooper want to steal back?",
+            "correct_answer": "Thievius Raccoonus",
+            "incorrect_answers": [
+                "Raccoon Training 101",
+                "The Art of Sneak",
+                "Raccoonus Teachus"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Sports",
+            "question": "What team won the 2016 MLS Cup?",
+            "correct_answer": "Seattle Sounders",
+            "incorrect_answers": [
+                "Colorado Rapids",
+                "Toronto FC",
+                "Montreal Impact"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Film",
+            "question": "What three movies, in order from release date, make up the &quot;Dollars Trilogy&quot;?",
+            "correct_answer": "&quot;A Fistful of Dollars&quot;, &quot;For a Few Dollars More&quot;, &quot;The Good, the Bad, and the Ugly&quot;",
+            "incorrect_answers": [
+                "&quot;The Good, the Bad, and the Ugly&quot;, &quot;For A Few Dollars More&quot;, &quot;A Fistful of Dollars&quot;",
+                "&quot;For a Few Dollars More&quot;, &quot;The Good, the Bad, and the Ugly&quot;, &quot;A Fistful of Dollars&quot;",
+                "&quot;For a Few Dollars More&quot;, &quot;A Fistful of Dollars&quot;, &quot;The Good, the Bad, and the Ugly&quot;"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Comics",
+            "question": "In the Hellboy universe, who founded the BPRD?",
+            "correct_answer": "Trevor Bruttenholm",
+            "incorrect_answers": [
+                "Kate Corrigan",
+                "Johann Kraus",
+                "Benjamin Daimio"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Video Games",
+            "question": "What is the protagonist&#039;s title given by the demons in DOOM (2016)?",
+            "correct_answer": "Doom Slayer",
+            "incorrect_answers": [
+                "Doom Guy",
+                "Doom Marine",
+                "Doom Reaper"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Cartoon &amp; Animations",
+            "question": "Which of these characters from &quot;SpongeBob SquarePants&quot; is not a squid?",
+            "correct_answer": "Gary",
+            "incorrect_answers": [
+                "Orvillie",
+                "Squidward",
+                "Squidette"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Sports",
+            "question": "Who was the top scorer of the 2014 FIFA World Cup?",
+            "correct_answer": "James Rodr&iacute;guez",
+            "incorrect_answers": [
+                "Thomas M&uuml;ller",
+                "Lionel Messi",
+                "Neymar"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Entertainment: Television",
+            "question": "Baron Silas Greenback is the arch nemesis of which cartoon hero?",
+            "correct_answer": "Danger Mouse",
+            "incorrect_answers": [
+                "Bananaman",
+                "SuperTed",
+                "Captain Star"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Politics",
+            "question": "Which of the following United States Presidents served the shortest term in office?",
+            "correct_answer": "William Henry Harrison",
+            "incorrect_answers": [
+                "Zachary Taylor",
+                "James A. Garfield",
+                "Warren G. Harding"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "In what year did the Berlin Wall fall?",
+            "correct_answer": "1989",
+            "incorrect_answers": [
+                "1987",
+                "1991",
+                "1993"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Geography",
+            "question": "What city is known as the Rose Capital of the World?",
+            "correct_answer": "Tyler, Texas",
+            "incorrect_answers": [
+                "San Diego, California",
+                "Miami, Florida",
+                "Anaheim, California"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "Science: Computers",
+            "question": "What does the term MIME stand for, in regards to computing?",
+            "correct_answer": "Multipurpose Internet Mail Extensions",
+            "incorrect_answers": [
+                "Mail Internet Mail Exchange",
+                "Multipurpose Interleave Mail Exchange",
+                "Mail Interleave Method Exchange"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Geography",
+            "question": "What is the area of Vatican City?",
+            "correct_answer": "0.44km^2",
+            "incorrect_answers": [
+                "0.10km^2",
+                "0.86km^2",
+                "12.00km^2"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "medium",
+            "category": "History",
+            "question": "The seed drill was invented by which British inventor?",
+            "correct_answer": "Jethro Tull",
+            "incorrect_answers": [
+                "Charles Babbage",
+                "Isaac Newton",
+                "J.J Thomson"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "hard",
+            "category": "Entertainment: Board Games",
+            "question": "How many rooms are there, not including the hallways and the set of stairs, in the board game &quot;Clue&quot;?",
+            "correct_answer": "9",
+            "incorrect_answers": [
+                "1",
+                "6",
+                "10"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Sports",
+            "question": "Who won the premier league title in the 2015-2016 season following a fairy tale run?",
+            "correct_answer": "Leicester City",
+            "incorrect_answers": [
+                "Tottenham Hotspur",
+                "Watford",
+                "Stoke City"
+            ]
+        }
+    ]
+}

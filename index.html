@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="myscript_copy.js"></script>
+    <script src="myscript.js"></script>
 
     <title>Trivia Pyramid</title>
 </head>
 <body>
-    <h1 id="title">Trivia Pyramid</h1>
-    <button type="button" onclick="fetchQuestions()" id="startbutton">Start</button> <br> <br>
-    <button type="button" onclick="" id="settingsbutton">Settings</button>
-    <div id="question1"></div> <br> <br>
-    <div id="question2"></div>
-    <div id="settingsmenu">
-        <div id="difficulty">
-            <button type="button" id="easy" class="difficultybutton">Easy</button>
-            <button type="button" id="medium" class="difficultybutton">Med</button>
-            <button type="button" id="hard" class="difficultybutton">Hard</button>
+    <div id="screen">
+        <h1 id="title">Trivia Pyramid</h1>
+        <button type="button" onclick="fetchQuestions()" id="startbutton">Start</button> <br> <br>
+        <button type="button" onclick="settingsToggle()" id="settingsbutton">Settings</button>
+        <div id="box1">
+            <div id="question1"></div> <br>
+            <img id="img1">
         </div>
-        <div id="genre">
-            <button type="button" id="sports" class="genrebutton">Sports</button>
-            <button type="button" id="history" class="genrebutton">History</button>
-            <button type="button" id="music" class="genrebutton">Music</button>
-            <button type="button" id="books" class="genrebutton">Books</button>
-            <button type="button" id="videogames" class="genrebutton">Video Games</button>
-            <button type="button" id="tv" class="genrebutton">TV</button>
-            <button type="button" id="art" class="genrebutton">Art</button>
-            <button type="button" id="anime" class="genrebutton">Anime</button>
-            <button type="button" id="general" class="genrebutton">General Knowledge</button>
+        <div id="box2">
+        <div id="question2"></div> <br>
+        <img id="img2">
+        </div>
+        <div id="settingsmenu"> <br> <br>
+            <div id="difficulty">
+                <button type="button" id="easy" class="difficultybutton" onclick="difficultyTweak('easy')">Easy</button>
+                <button type="button" id="medium" class="difficultybutton" onclick="difficultyTweak('medium')">Med</button>
+                <button type="button" id="hard" class="difficultybutton" onclick="difficultyTweak('hard')">Hard</button>
+            </div><br><br>
+                <div id="genre">
+                    <button type="button" id="21" class="genrebutton" onclick="genreSet(21)">Sports</button>
+                    <button type="button" id="23" class="genrebutton" onclick="genreSet(23)">History</button>
+                    <button type="button" id="12" class="genrebutton" onclick="genreSet(12)">Music</button><br>
+                    <button type="button" id="10" class="genrebutton" onclick="genreSet(10)">Books</button>
+                    <button type="button" id="15" class="genrebutton" onclick="genreSet(15)">Games</button>
+                    <button type="button" id="14" class="genrebutton" onclick="genreSet(14)">TV</button><br>
+                    <button type="button" id="25" class="genrebutton" onclick="genreSet(25)">Art</button>
+                    <button type="button" id="31" class="genrebutton" onclick="genreSet(31)">Anime</button>
+                    <button type="button" id="9" class="genrebutton" onclick="genreSet(9)">General</button>
+                </div>
         </div>
     </div>
 </body>
