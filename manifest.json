@@ -1,0 +1,36 @@
+{
+    "theme_color":"#ffa200",
+"background_color":"#ffd500",
+"icons":
+[
+    {"purpose":"maskable","sizes":"512x512","src":"icons/icon512_maskable.png","type":"image/png"},
+    {"purpose":"any","sizes":"512x512","src":"icons/android-launchericon-512-512.png","type":"image/png"},
+    {"purpose":"any","sizes":"192x192","src":"icons/android-launchericon-192-192.png","type":"image/png"},
+    {"purpose":"any","sizes":"144x144","src":"icons/android-launchericon-144-144.png","type":"image/png"},
+    {"purpose":"any","sizes":"96x96","src":"icons/android-launchericon-96-96.png","type":"image/png"}
+    ],
+    "screenshots": [
+    {
+      "src": "screenshots/screenshot1.png",
+      "sizes": "1442x639",
+      "type": "image/png",
+      "form_factor": "wide",
+      "purpose": "any"
+    },
+    {
+      "src": "screenshots/screenshot2.png",
+      "sizes": "674x907",
+      "type": "image/png",
+      "purpose": "any"
+    }
+    ],
+ 
+               
+"orientation":"any",
+"display":"standalone",
+"start_url":"cohen6526.github.io/TriviaPyramid/",
+"dir":"auto",
+"lang":"en-US",
+"name":"Trivia Pyramid",
+"short_name":"TriviaPyramid"
+}

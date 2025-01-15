@@ -17,6 +17,8 @@ body{
     background-color:rgb(219, 179, 103);
     padding:5px;
     border:black solid;
+    font-family:"Faculty Glyphic", serif;
+    font-size:68px;
 }
 @media(min-width:728px){
     *{
@@ -40,12 +42,10 @@ body{
     border:black solid;
 }
 #startbutton{
-    width:2cm;
-    height:1cm;
+    font-size:30px;
 }
 #settingsbutton{
-    width:2cm;
-    height:1cm;
+    font-size:30px;
 }
 #settingsmenu{
     text-align:center;

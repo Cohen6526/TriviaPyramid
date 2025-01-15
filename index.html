@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="myscript.js"></script>
-
+    <link rel="manifest" href="manifest.json">
     <title>Trivia Pyramid</title>
 </head>
 <body>
@@ -13,6 +16,7 @@
         <h1 id="title">Trivia Pyramid</h1>
         <button type="button" onclick="fetchQuestions()" id="startbutton">Start</button> <br> <br>
         <button type="button" onclick="settingsToggle()" id="settingsbutton">Settings</button>
+        <button id="installButton" style="display:none;">Install App</button>
         <div id="box1">
             <div id="question1"></div> <br>
             <img id="img1">

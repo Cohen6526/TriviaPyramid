@@ -56,6 +56,7 @@ async function fetchQuestions() {
     document.getElementById("settingsbutton").style.display = "none";
     document.getElementById("settingsmenu").style.display = "none";
     document.getElementById("title").style.display = "none";
+    document.getElementById("installButton").style.display = "none";
     document.getElementById("img1").style.display = "inline-block";
     document.getElementById("img2").style.display = "inline-block";
     document.getElementById("box1").style.display = "block";
@@ -77,7 +78,7 @@ async function fetchQuestions() {
 
 async function fetchimage(query, image){
     try{
-    imageresponse = await fetch("https://api.pexels.com/v1/search?query=" + query, {headers: {Authorization: "DH45HmxriNpi3ljbyvEMdvo2vnFOY4El5ZMhLuLkTF8tap4HUzkEtlLu"}}) //code from Habil on medium
+    imageresponse = await fetch("https://api.pexels.com/v1/search?query=" + query, {headers: {Authorization: "DH45HmxriNpi3ljbyvEMdvo2vnFOY4El5ZMhLuLkTF8tap4HUzkEtlLu"}}) //code from Habil on medium https://medium.com/star-gazers/how-to-work-pexels-api-with-javascript-9cda16bbece9
     imagedata = await imageresponse.json();
     }catch(error){
         console.error("Error fetching image", error);
@@ -121,7 +122,6 @@ async function calcWords(whichst){
         }else{
             let currentword = questionarray[i].replace("ldquo", "").replace("rdquo", "").replace("&", "").replace(";", "").replace("quot", "").replace("&", "").replace(";", "").replace("rsquo", "").replace("quot", "").replace(",", "").replace("?", "").replace("#", "").replace("%", "").replace("#", "").replace("#", "");
             try{
-               // questionarray[i].replace("ldquo", ""); GET ME TO WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 dictresponse = await fetch(dictUrl + currentword);
                 dictdata = await dictresponse.json();  
             }catch(error){
@@ -237,3 +237,38 @@ function settingsToggle(){
         bool = 0;
     }
 }
+
+// load the service worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('sw.js').then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }, function(error) {
+        console.log('Service Worker registration failed:', error);
+      });
+    });
+  }   
+
+  // handle install prompt
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  const installButton = document.getElementById('installButton');
+  installButton.style.display = 'block';
+
+  installButton.addEventListener('click', () => {
+    installButton.style.display = 'none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});   
