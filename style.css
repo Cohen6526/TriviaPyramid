@@ -12,6 +12,15 @@ body{
     display:none;
     background-color:rgb(185, 148, 77);
     border:black solid;
+    font-family:"Faculty Glyphic", serif;
+    padding:5px;
+}
+#question2{
+    display:none;
+    background-color:rgb(185, 148, 77);
+    border:black solid;
+    font-family:"Faculty Glyphic", serif;
+    padding:5px;
 }
 #title{
     background-color:rgb(219, 179, 103);
@@ -36,11 +45,7 @@ body{
         width:48%;
     }
 }
-#question2{
-    display:none;
-    background-color:rgb(185, 148, 77);
-    border:black solid;
-}
+
 #startbutton{
     font-size:30px;
 }

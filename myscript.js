@@ -106,7 +106,7 @@ async function fetchimage(query, image){
 }
 let keywords = " ";
 let questionarray = "";
-let bannedwords = ["what", "What", "who", "Who", "when", "When", "why", "Why", "where", "Where", "is", "Is", "was", "Was", "in", "In", "and", "And", "which", "Which", "the", "The", "of", "Of", "to", "To", "as", "As", "does", "Does", "how", "How", "made", "Made", "want", "Want", "for", "For"]
+let bannedwords = ["what", "What", "who", "Who", "when", "When", "why", "Why", "where", "Where", "is", "Is", "was", "Was", "in", "In", "and", "And", "which", "Which", "the", "The", "of", "Of", "to", "To", "as", "As", "does", "Does", "how", "How", "made", "Made", "want", "Want", "for", "For", "core", "Core"]
 
 async function calcWords(whichst){
     keywords = "";
