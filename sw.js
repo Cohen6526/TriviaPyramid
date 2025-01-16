@@ -1,4 +1,4 @@
-const version = 'v152';  // change this everytime you update the service worker
+const version = 'v153';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 
