@@ -1,8 +1,8 @@
 
 
 let dictUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-//let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
-let apiUrl = 'responses.json';
+let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
+//let apiUrl = 'responses.json';
 let question = 0;
 let data = "";
 let firstOption = "";
