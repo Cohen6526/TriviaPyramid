@@ -107,3 +107,9 @@ button:hover{
 #box2:hover{
     background-color:rgb(0, 0, 0, 0.3);
 }
+#blurb{
+    font-family:"Faculty Glyphic", serif;
+    background-color:rgb(219, 179, 103);
+    border:black solid;
+    padding:10px;
+}
