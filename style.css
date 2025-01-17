@@ -1,5 +1,10 @@
+*{
+    border-radius:5px;
+}
 body{
     background-image:url("bricks.webp");
+    font-family:sans-serif;
+    color:black;
 }
 #screen{
     display:inline-block;
@@ -28,6 +33,7 @@ body{
     border:black solid;
     font-family:"Faculty Glyphic", serif;
     font-size:68px;
+    border-radius:5px;
 }
 @media(min-width:728px){
     *{
@@ -79,9 +85,12 @@ body{
 }
 button{
     background-color:rgb(219, 179, 103);
+    border-radius:5px;
+    box-shadow:3px 3px  3px black;
 }
 button:hover{
     background-color:rgb(134, 110, 64);
+    box-shadow:none;
 }
 #img1{
     display:none;
@@ -112,4 +121,5 @@ button:hover{
     background-color:rgb(219, 179, 103);
     border:black solid;
     padding:10px;
+    border-radius:5px;
 }
