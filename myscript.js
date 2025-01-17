@@ -61,6 +61,7 @@ async function fetchQuestions() {
     document.getElementById("img2").style.display = "inline-block";
     document.getElementById("box1").style.display = "block";
     document.getElementById("box2").style.display = "block";
+    document.getElementById("blurb").style.display = "none";
     firstOption.style.display = "block";
     secondOption.style.display = "block";
     question = 0;
@@ -69,9 +70,13 @@ async function fetchQuestions() {
         const response = await fetch(apiUrl + genre + difficulty);
         data = await response.json();
         console.log(data);     
+        if(data.response_code == 5){
+            window.alert("Too many requests, please try again later");
+        }
          
     }catch(error){
         console.error("Error fetching questions", error);
+        
     }
     level();
 }
@@ -200,6 +205,7 @@ function fail(){
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
+        document.getElementById("blurb").style.display = "block";
     }
 }
 
@@ -223,6 +229,7 @@ function succeed(){
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
+        document.getElementById("blurb").style.display = "block";
     }
 }
 
