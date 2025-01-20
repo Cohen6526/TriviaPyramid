@@ -41,6 +41,7 @@ body{
     }
     #screen{
         width:auto;
+        text-align:center;
     }
     #box1{
         float:left;
@@ -122,4 +123,24 @@ button:hover{
     border:black solid;
     padding:10px;
     border-radius:5px;
+}
+#nextbutton{
+    display:none;
+    background-color:rgb(219, 179, 103);
+    border-radius:5px;
+    box-shadow:3px 3px  3px black;
+    height:2cm;
+    width:2cm;
+}
+#nextbutton:hover{
+    background-color:rgb(134, 110, 64);
+    box-shadow:none;
+}
+#scoret{
+    display:none;
+    background-color:rgb(219, 179, 103);
+    border-radius:5px;
+    padding:5px;
+    border:black solid;
+    text-align:center;
 }

@@ -1,4 +1,4 @@
-const version = 'v154';  // change this everytime you update the service worker
+const version = 'v155';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 
@@ -21,7 +21,8 @@ const STATIC_ASSETS = [
         'bricks.webp',
         'responses.json',
         'sfx/extremely-loud-correct-buzzer.mp3',
-        'sfx/extremely-loud-incorrect-buzzer.mp3'
+        'sfx/extremely-loud-incorrect-buzzer.mp3',
+        'loading-buffering.gif'
 ];
 
 // Install event: Cache static assets

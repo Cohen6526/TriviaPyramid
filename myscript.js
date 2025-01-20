@@ -16,6 +16,7 @@ let imageresponse = "";
 let imagedata = "";
 let query = 'Horse';
 let prev = 21;
+let score = 0;
 
 function genreSet(value){
     genre = "&category=" + value;
@@ -62,22 +63,23 @@ async function fetchQuestions() {
     document.getElementById("box1").style.display = "block";
     document.getElementById("box2").style.display = "block";
     document.getElementById("blurb").style.display = "none";
+    document.getElementById("screen").style.width = "100%";
     firstOption.style.display = "block";
     secondOption.style.display = "block";
     question = 0;
 
     try{
-        const response = await fetch(apiUrl + genre + difficulty);
+        let response = await fetch(apiUrl + genre + difficulty);
+        
         data = await response.json();
-        console.log(data);     
+        console.log(data); 
         if(data.response_code == 5){
             window.alert("Too many requests, please try again later");
         }
-         
     }catch(error){
         console.error("Error fetching questions", error);
-        
     }
+    
     level();
 }
 
@@ -163,7 +165,15 @@ async function calcWords(whichst){
     
 }
 function level(){
+    document.getElementById("nextbutton").style.display = "none";
+    document.getElementById("img1").style.display = "inline-block";
+    document.getElementById("img2").style.display = "inline-block";
+    document.getElementById("box1").style.display = "block";
+    document.getElementById("box2").style.display = "block";
+    document.getElementById("scoret").style.display = "none";
     rand = Math.floor(Math.random() * 2);
+    document.getElementById("img2").src = "loading-buffering.gif";
+    document.getElementById("img1").src = "loading-buffering.gif";
     if(rand == 0){
         firstOption.innerHTML = data.results[question].question + " " + data.results[question].incorrect_answers[0] + ".";
         calcWords(1);
@@ -186,6 +196,7 @@ function level(){
     
 }
 function fail(){
+    
     console.log("FAILURE! YOU ARE A FAILURE!");
     firstbox.removeEventListener("click", fail);
     secondbox.removeEventListener("click", fail);
@@ -193,7 +204,13 @@ function fail(){
     secondbox.removeEventListener("click", succeed);
     wrongAnswer.play();
     if(question != 20){
-        level();
+        document.getElementById("nextbutton").style.display = "inline-block";
+        document.getElementById("scoret").style.display = "inline-block";
+        document.getElementById("scoret").innerHTML = "Incorrect! " + score + "/10";
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "none";
+        document.getElementById("box1").style.display = "none";
+        document.getElementById("box2").style.display = "none";
     }
     if(question == 20){
         firstOption.style.display = "none";
@@ -206,6 +223,8 @@ function fail(){
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
         document.getElementById("blurb").style.display = "block";
+        document.getElementById("screen").style.width = "auto";
+        score = 0;
     }
 }
 
@@ -217,7 +236,14 @@ function succeed(){
     secondbox.removeEventListener("click", fail);
     rightAnswer.play();
     if(question != 20){
-       level();
+        document.getElementById("nextbutton").style.display = "inline-block";
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "none";
+        document.getElementById("box1").style.display = "none";
+        document.getElementById("box2").style.display = "none";
+        document.getElementById("scoret").style.display = "inline-block";
+        score++;
+        document.getElementById("scoret").innerHTML = "Correct! " + score + "/10";
     }
     if(question == 20){
         firstOption.style.display = "none";
@@ -230,6 +256,8 @@ function succeed(){
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
         document.getElementById("blurb").style.display = "block";
+        document.getElementById("screen").style.width = "auto";
+        score = 0;
     }
 }
 
