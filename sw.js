@@ -56,14 +56,16 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     fetch(event.request)
       .then(networkResponse => {
-        // If network fetch is successful, cache the response
-        return caches.open(DYNAMIC_CACHE_NAME).then(cache => {
-          cache.put(event.request, networkResponse.clone());
+        if (networkResponse.status === 200) {
+          return caches.open(DYNAMIC_CACHE_NAME).then(cache => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        } else {
           return networkResponse;
-        });
+        }
       })
       .catch(() => {
-        // If network fetch fails, fallback to cache
         return caches.match(event.request);
       })
   );
