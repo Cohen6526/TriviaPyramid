@@ -1,4 +1,4 @@
-const version = 'v155';  // change this everytime you update the service worker
+const version = 'v156';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 
@@ -51,12 +51,12 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch event: Network-first strategy
+// Fetch event: Network-first strategy 
 self.addEventListener('fetch', event => {
   event.respondWith(
     fetch(event.request)
       .then(networkResponse => {
-        if (networkResponse.status === 200) {
+        if (networkResponse.status === 200) { //code given from Copilot AI in Github because I spent a whole day trying to fix this and this is what it suggested
           return caches.open(DYNAMIC_CACHE_NAME).then(cache => {
             cache.put(event.request, networkResponse.clone());
             return networkResponse;

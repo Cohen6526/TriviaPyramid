@@ -1,8 +1,8 @@
 
 
 let dictUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
-//let apiUrl = 'responses.json';
+//let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
+let apiUrl = 'responses.json';
 let question = 0;
 let data = "";
 let firstOption = "";
@@ -175,21 +175,21 @@ function level(){
     document.getElementById("img2").src = "loading-buffering.gif";
     document.getElementById("img1").src = "loading-buffering.gif";
     if(rand == 0){
-        firstOption.innerHTML = data.results[question].question + " " + data.results[question].incorrect_answers[0] + ".";
+        firstOption.innerHTML = data.results[question].question + " <span class='green'>" + data.results[question].incorrect_answers[0] + "</span>.";
         calcWords(1);
         firstbox.addEventListener("click", fail);
         firstOption.style.display = "block";
 
-        secondOption.innerHTML = data.results[question + 1].question + " " + data.results[question + 1].correct_answer + ".";
+        secondOption.innerHTML = data.results[question + 1].question + " <span class='green'>" + data.results[question + 1].correct_answer + "</span>.";
         secondbox.addEventListener("click", succeed);
         secondOption.style.display = "block";
     }else{
-        firstOption.innerHTML = data.results[question].question + " " + data.results[question].correct_answer + ".";
+        firstOption.innerHTML = data.results[question].question + " <span class='green'>" + data.results[question].correct_answer + "</span>.";
         calcWords(1);
         firstbox.addEventListener("click", succeed);
         firstOption.style.display = "block";
 
-        secondOption.innerHTML = data.results[question + 1].question + " " + data.results[question + 1].incorrect_answers[0] + ".";
+        secondOption.innerHTML = data.results[question + 1].question + " <span class='green'>" + data.results[question + 1].incorrect_answers[0] + "</span>.";
         secondbox.addEventListener("click", fail);
         secondOption.style.display = "block";
     }
@@ -206,7 +206,7 @@ function fail(){
     if(question != 20){
         document.getElementById("nextbutton").style.display = "inline-block";
         document.getElementById("scoret").style.display = "inline-block";
-        document.getElementById("scoret").innerHTML = "Incorrect! " + score + "/10";
+        document.getElementById("scoret").innerHTML = "<span id='red'>Incorrect!</span> " + score + "/10";
         document.getElementById("img1").style.display = "none";
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
@@ -243,7 +243,7 @@ function succeed(){
         document.getElementById("box2").style.display = "none";
         document.getElementById("scoret").style.display = "inline-block";
         score++;
-        document.getElementById("scoret").innerHTML = "Correct! " + score + "/10";
+        document.getElementById("scoret").innerHTML = "<span class='green'>Correct!</span> " + score + "/10";
     }
     if(question == 20){
         firstOption.style.display = "none";

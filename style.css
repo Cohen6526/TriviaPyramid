@@ -1,5 +1,6 @@
 *{
     border-radius:5px;
+    font-family:"Faculty Glyphic", serif;
 }
 body{
     background-image:url("bricks.webp");
@@ -127,6 +128,7 @@ button:hover{
     border:black solid;
     padding:10px;
     border-radius:5px;
+    font-size:30px;
 }
 #nextbutton{
     display:none;
@@ -147,4 +149,12 @@ button:hover{
     padding:5px;
     border:black solid;
     text-align:center;
+    font-family:"Faculty Glyphic", serif;
+    font-size:40px;
+}
+#red{
+    color:red;
+}
+.green{
+    color:green;
 }
