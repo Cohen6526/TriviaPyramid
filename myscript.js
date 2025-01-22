@@ -1,8 +1,8 @@
 
 
 let dictUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-//let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
-let apiUrl = 'responses.json';
+let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
+//let apiUrl = 'responses.json';
 let question = 0;
 let data = "";
 let firstOption = "";
@@ -90,7 +90,7 @@ async function fetchimage(query, image){
     imagedata = await imageresponse.json();
     const imageUrl = imagedata.photos[0].src.medium; //code from copilot because I don't know how to work with caches
 
-    cache = await caches.open('image-cache')
+    cache = await caches.open('image-cache')//code from copilot because I don't know how to work with caches
     await cache.add(imageUrl); //code from copilot because I don't know how to work with caches
 
     }catch(error){
