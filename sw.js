@@ -1,4 +1,4 @@
-const version = 'v157';  // change this everytime you update the service worker
+const version = 'v164';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 
@@ -51,37 +51,43 @@ self.addEventListener('activate', event => {
   );
 });
 
+
+
 // Fetch event: Network-first strategy 
-self.addEventListener('fetch', event => {
-  if (event.request.destination === 'image') { //code from copilot AI in github. I do not know how caches work.
-    event.respondWith(
-        caches.match(event.request).then((response) => {
-            return response || fetch(event.request).then((response) => {
-                let responseClone = response.clone();
-                caches.open('image-cache').then((cache) => {
-                    cache.put(event.request, responseClone);
-                });
-                return response;
-            });
-        })
-    );
+self.addEventListener('fetch', event => { //code from coplilot AI because I have no idea how any of this stuff works
+  if (event.request.destination === 'image') {
+      event.respondWith(
+          caches.match(event.request).then(response => {
+              return response || fetch(event.request).then(networkResponse => {
+                  if (networkResponse.ok) {
+                      let responseClone = networkResponse.clone();
+                      caches.open('image-cache').then(cache => {
+                          cache.put(event.request, responseClone);
+                      });
+                  }
+                  return networkResponse;
+              }).catch(error => {
+                  console.error('Fetch failed:', error);
+                  return caches.match(event.request);
+              });
+          })
+      );
 } else {
-    event.respondWith(fetch(event.request));
-} //end of code from github copilot
   event.respondWith(
     fetch(event.request)
       .then(networkResponse => {
-        if (networkResponse.status === 200) { //code given from Copilot AI in Github because I spent a whole day trying to fix this and this is what it suggested
+        if (networkResponse.ok && networkResponse.type !== 'opaque') { //code given from copilot AI in github. I alrerady copy pasted this from the stuff you gave us so it's not like I wrote it anyway
           return caches.open(DYNAMIC_CACHE_NAME).then(cache => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
+              cache.put(event.request, networkResponse.clone());
+              return networkResponse;
           });
-        } else {
+      } else {
           return networkResponse;
-        }
-      })
-      .catch(() => {
-        return caches.match(event.request);
-      })
-  );
+      }
+  }).catch(() => {
+    console.error('Fetch failed:', error);
+    return caches.match(event.request);
+  })
+);
+}
 });
