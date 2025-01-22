@@ -1,4 +1,4 @@
-const version = 'v156';  // change this everytime you update the service worker
+const version = 'v157';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 
@@ -53,6 +53,21 @@ self.addEventListener('activate', event => {
 
 // Fetch event: Network-first strategy 
 self.addEventListener('fetch', event => {
+  if (event.request.destination === 'image') { //code from copilot AI in github. I do not know how caches work.
+    event.respondWith(
+        caches.match(event.request).then((response) => {
+            return response || fetch(event.request).then((response) => {
+                let responseClone = response.clone();
+                caches.open('image-cache').then((cache) => {
+                    cache.put(event.request, responseClone);
+                });
+                return response;
+            });
+        })
+    );
+} else {
+    event.respondWith(fetch(event.request));
+} //end of code from github copilot
   event.respondWith(
     fetch(event.request)
       .then(networkResponse => {
