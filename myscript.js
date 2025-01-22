@@ -1,8 +1,8 @@
 
 
 let dictUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-//let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
-let apiUrl = 'responses.json';
+let apiUrl = "https://opentdb.com/api.php?amount=20&type=multiple";
+//let apiUrl = 'responses.json';
 let question = 0;
 let data = "";
 let firstOption = "";
@@ -62,7 +62,6 @@ async function fetchQuestions() {
     document.getElementById("img2").style.display = "inline-block";
     document.getElementById("box1").style.display = "block";
     document.getElementById("box2").style.display = "block";
-    document.getElementById("blurb").style.display = "none";
     document.getElementById("screen").style.width = "100%";
     firstOption.style.display = "block";
     secondOption.style.display = "block";
@@ -222,7 +221,6 @@ function fail(){
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
-        document.getElementById("blurb").style.display = "block";
         document.getElementById("screen").style.width = "auto";
         score = 0;
     }
@@ -255,7 +253,6 @@ function succeed(){
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
-        document.getElementById("blurb").style.display = "block";
         document.getElementById("screen").style.width = "auto";
         score = 0;
     }
