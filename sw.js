@@ -1,4 +1,4 @@
-const version = 'v164';  // change this everytime you update the service worker
+const version = 'v165';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 
@@ -76,7 +76,7 @@ self.addEventListener('fetch', event => { //code from coplilot AI because I have
   event.respondWith(
     fetch(event.request)
       .then(networkResponse => {
-        if (networkResponse.ok && networkResponse.type !== 'opaque') { //code given from copilot AI in github. I alrerady copy pasted this from the stuff you gave us so it's not like I wrote it anyway
+        if (networkResponse.status === 200 && networkResponse.type !== 'opaque') { //code given from copilot AI in github. I alrerady copy pasted this from the stuff you gave us so it's not like I wrote it anyway
           return caches.open(DYNAMIC_CACHE_NAME).then(cache => {
               cache.put(event.request, networkResponse.clone());
               return networkResponse;
