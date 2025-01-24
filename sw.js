@@ -85,7 +85,6 @@ self.addEventListener('fetch', event => { //code from coplilot AI because I have
           return networkResponse;
       }
   }).catch(() => {
-    console.error('Fetch failed:', error);
     return caches.match(event.request);
   })
 );
