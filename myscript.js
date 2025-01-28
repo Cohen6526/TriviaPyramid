@@ -201,6 +201,23 @@ function level(){
     }
     
 }
+
+function title2(){
+    firstOption.style.display = "none";
+    secondOption.style.display = "none";
+    document.getElementById("startbutton").style.display = "inline-block";
+    document.getElementById("settingsbutton").style.display = "inline-block";
+    document.getElementById("title").style.display = "block";
+    document.getElementById("screen").style.width = "auto";
+    score = 0;
+    document.getElementById("ending").style.display = "none";
+    document.getElementById("scoret").style.display = "none";
+    document.getElementById("nextbutton").style.display = "none";
+}
+
+
+
+
 function fail(){
     
     console.log("FAILURE! YOU ARE A FAILURE!");
@@ -219,17 +236,20 @@ function fail(){
         document.getElementById("box2").style.display = "none";
     }
     if(question == 20){
-        firstOption.style.display = "none";
-        secondOption.style.display = "none";
-        document.getElementById("startbutton").style.display = "inline-block";
-        document.getElementById("settingsbutton").style.display = "inline-block";
-        document.getElementById("title").style.display = "block";
+        document.getElementById("scoretext").innerHTML = "Score: " + score + "/10";
         document.getElementById("img1").style.display = "none";
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
-        document.getElementById("screen").style.width = "auto";
-        score = 0;
+        document.getElementById("ending").style.display = "inline-block";
+        console.log("Game over game over2");
+        if(score <= 5){
+            document.getElementById("scoretext").innerHTML += "<br>Do better next time.";
+        }else if(score <= 9){
+            document.getElementById("scoretext").innerHTML += "<br>Good Job!";
+        }else if(score == 10){
+            document.getElementById("scoretext").innerHTML += "<br>Perfect! Great Job!";
+        }
     }
 }
 
@@ -240,6 +260,7 @@ function succeed(){
     firstbox.removeEventListener("click", fail);
     secondbox.removeEventListener("click", fail);
     rightAnswer.play();
+    score++;
     if(question != 20){
         document.getElementById("nextbutton").style.display = "inline-block";
         document.getElementById("img1").style.display = "none";
@@ -247,23 +268,28 @@ function succeed(){
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
         document.getElementById("scoret").style.display = "inline-block";
-        score++;
         document.getElementById("scoret").innerHTML = "<span class='green'>Correct!</span> " + score + "/10";
     }
     if(question == 20){
-        firstOption.style.display = "none";
-        secondOption.style.display = "none";
-        document.getElementById("startbutton").style.display = "inline-block";
-        document.getElementById("settingsbutton").style.display = "inline-block";
-        document.getElementById("title").style.display = "block";
+        console.log("Game over game over");
+        document.getElementById("ending").style.display = "inline-block";
+        document.getElementById("scoretext").innerHTML = "Score: " + score + "/10";
+        if(score <= 5){
+            document.getElementById("scoretext").innerHTML += "<br>Do better next time.";
+        }else if(score <= 9){
+            document.getElementById("scoretext").innerHTML += "<br>Good Job!";
+        }else if(score == 10){
+            document.getElementById("scoretext").innerHTML += "<br>Perfect! Great Job!";
+        }
         document.getElementById("img1").style.display = "none";
         document.getElementById("img2").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
-        document.getElementById("screen").style.width = "auto";
-        score = 0;
+        
     }
 }
+
+
 
 let bool = 0;
 function settingsToggle(){

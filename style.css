@@ -153,3 +153,18 @@ button:hover{
 .green{
     color:green;
 }
+#ending{
+    display:none;
+}
+#scoretext{
+    background-color:rgb(219, 179, 103);
+    border-radius:5px;
+    padding:5px;
+    border:black solid;
+    text-align:center;
+    font-size:40px;
+}
+#homebutton{
+    padding:10px;
+    font-size:larger;
+}
